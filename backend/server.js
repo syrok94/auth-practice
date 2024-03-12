@@ -36,7 +36,7 @@ app.get("/failure", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.status(200).send("hello from server!!");
+  res.redirect("http://localhost:5173");
 });
 
 app.get("/success", (req, res) => {
@@ -54,7 +54,7 @@ app.get(
   (req, res) => {
     // This function will only execute upon successful authentication
     console.log("Google authentication successful!");
-    res.redirect("/success"); // Redirect to the success route
+    res.redirect("http://localhost:5173/HomePage"); // Redirect to the success route
   }
 );
 
